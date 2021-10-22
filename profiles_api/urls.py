@@ -1,3 +1,6 @@
+from profiles_api import views
+
+
 from django.db.models import base
 from django.urls import path, include
 
@@ -9,6 +12,7 @@ from profiles_api import views
 router = DefaultRouter()
 router.register('hello-viewset', views.HelloViewSet, basename='hello-viewset')
 router.register('profile', views.UserProfileViewSet)
+router.register('feed', views.UserProfileFeedViewSet)
 
 
 urlpatterns = [
